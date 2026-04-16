@@ -47,7 +47,7 @@ header {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 10px;
 }
 
@@ -59,6 +59,7 @@ header {
 .hero p {
   margin: 20px 0;
   color: #cbd5f5;
+  max-width: 700px;
 }
 
 .btn {
@@ -71,19 +72,19 @@ header {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 70px 0;
   border-top: 1px solid #1f2937;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 20px;
 }
 
 .card {
   background: #111827;
-  padding: 20px;
+  padding: 22px;
   border-radius: 10px;
 }
 
@@ -98,6 +99,11 @@ header {
   border-radius: 6px;
   margin: 5px 5px 0 0;
   font-size: 12px;
+}
+
+.highlight {
+  color: #22c55e;
+  font-weight: 600;
 }
 
 footer {
@@ -116,7 +122,7 @@ footer {
 <div><b>Koteeswaran T</b></div>
 <nav>
 <a href="#projects">Projects</a>
-<a href="#execution">Execution</a>
+<a href="#execution">Execution Model</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -127,11 +133,13 @@ footer {
 <div class="container">
 
 <h1>Technical Project Manager</h1>
-<h2>Execution-First • AI-Assisted • Product Delivery</h2>
+<h2>Execution-First • AI-Assisted • Product Builder</h2>
 
 <p>
-I don’t just manage projects — I drive execution, solve delivery bottlenecks,
-and ship real products across ecommerce, gaming, and Web3 ecosystems.
+Technical Project Manager with 10+ years of experience delivering production-grade systems across ecommerce,
+logistics, gaming, and real-time platforms.  
+I specialize in <span class="highlight">end-to-end execution</span> — converting ideas into working systems,
+driving delivery under ambiguity, and ensuring production stability.
 </p>
 
 <a href="Koteeswaran PM Resume.pdf" download class="btn">
@@ -144,40 +152,44 @@ Download Resume
 <section id="projects" class="section">
 <div class="container">
 
-<h2>🚀 Key Projects</h2>
+<h2>🚀 Product & Platform Builds</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Sprintora (Execution OS)</h3>
 <p>
-Built an execution-first project system where tasks drive delivery,
-daily updates are mandatory, and PM owns outcomes.
+Own product concept designed as an execution-first project operating system where
+tasks drive reality, PM owns delivery, and real-time signals replace reporting.
 </p>
+<p><b>Status:</b> In Development (Production-Oriented)</p>
+<span class="tag">Laravel</span>
 <span class="tag">Execution System</span>
-<span class="tag">PHP</span>
 <span class="tag">Realtime</span>
 </div>
 
 <div class="card">
 <h3>EVKart Pro</h3>
 <p>
-End-to-end ecommerce platform with admin workflows,
-order lifecycle, payment control, and service integration.
+EV spare parts ecommerce platform built with complete lifecycle:
+Product → Cart → Order → Payment → Fulfillment.
+Includes <b>Admin workflows</b>, <b>Customer (CX) flows</b>, and order control systems.
 </p>
+<p><b>Status:</b> Production Build</p>
+<span class="tag">Laravel</span>
 <span class="tag">Ecommerce</span>
-<span class="tag">PHP</span>
-<span class="tag">MySQL</span>
+<span class="tag">Admin Panel</span>
 </div>
 
 <div class="card">
 <h3>Naama Drop</h3>
 <p>
-Mobile-first product concept focused on real-world delivery execution
-and scalable user workflows.
+Mobile-first application focused on real-world delivery execution and scalable workflows,
+designed with practical user interaction and operational thinking.
 </p>
+<p><b>Status:</b> Active Development</p>
 <span class="tag">Flutter</span>
-<span class="tag">Product Build</span>
+<span class="tag">Mobile Product</span>
 </div>
 
 </div>
@@ -188,32 +200,43 @@ and scalable user workflows.
 <section id="execution" class="section">
 <div class="container">
 
-<h2>⚙️ How I Execute</h2>
-
-<p>
-Most PMs track progress. I drive execution.
-</p>
+<h2>⚙️ How I Run Projects (TPM Execution Model)</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Execution > Planning</h3>
-<p>Focus on delivery velocity, not documentation overload.</p>
+<h3>1. Charter & Problem Framing</h3>
+<p>Define scope, business objective, system boundaries, and risks.</p>
 </div>
 
 <div class="card">
-<h3>PM Owns Delivery</h3>
-<p>No dependency excuses — outcomes are owned end-to-end.</p>
+<h3>2. System Flow Design</h3>
+<p>Convert requirements into lifecycle flows (Order, Payment, Logistics, etc).</p>
 </div>
 
 <div class="card">
-<h3>Signals Over Reports</h3>
-<p>Real-time signals replace static dashboards.</p>
+<h3>3. Execution Planning</h3>
+<p>Break into actionable tasks, sprint structure, ownership mapping.</p>
 </div>
 
 <div class="card">
-<h3>AI-Assisted Workflow</h3>
-<p>Using AI tools to accelerate development and decision making.</p>
+<h3>4. Build & Integration</h3>
+<p>Drive dev + API integrations + validation cycles.</p>
+</div>
+
+<div class="card">
+<h3>5. Validation & UAT</h3>
+<p>Ensure real-world flow correctness before release.</p>
+</div>
+
+<div class="card">
+<h3>6. Release & Production Control</h3>
+<p>Deployment, monitoring, rollback readiness, issue handling.</p>
+</div>
+
+<div class="card">
+<h3>7. Post-Production Stability</h3>
+<p>Resolve failures, optimize flows, ensure system reliability.</p>
 </div>
 
 </div>
@@ -230,20 +253,26 @@ Most PMs track progress. I drive execution.
 
 <div class="card">
 <h3>B&G Technologies</h3>
-<p>Senior Project Manager – 2025</p>
-<p>Multi-API gaming platform, production governance, escalation control.</p>
+<p>Senior Technical Project Manager – 2025</p>
+<p>Multi-API platform delivery, production governance, escalation handling.</p>
 </div>
 
 <div class="card">
 <h3>FABC</h3>
-<p>Technical PM – 2023-2025</p>
-<p>Web3 gaming ecosystem, wallet integration, sprint execution.</p>
+<p>Technical PM – 2023–2025</p>
+<p>Web3 ecosystem, wallet integrations, execution alignment.</p>
 </div>
 
 <div class="card">
 <h3>GameNation</h3>
-<p>Delivery Lead – 2021-2023</p>
-<p>Ecommerce platform, logistics integrations, lifecycle delivery.</p>
+<p>Project Manager / Delivery Lead – 2021–2023</p>
+<p>Full ecommerce lifecycle delivery with logistics integrations.</p>
+</div>
+
+<div class="card">
+<h3>IndiGo Airlines</h3>
+<p>Operations Executive – 2014–2020</p>
+<p>Real-time execution control, high-pressure coordination, OTP delivery.</p>
 </div>
 
 </div>
@@ -257,7 +286,8 @@ Most PMs track progress. I drive execution.
 <h2>📬 Contact</h2>
 
 <p>Email: koteeswaran.t@hotmail.com</p>
-<p>Phone: 9445712235</p>
+<p>Phone: +91 9445712235</p>
+
 <p>
 <a href="https://linkedin.com/in/koteeswaran-t-b0371a398" target="_blank">
 LinkedIn Profile
