@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Koteeswaran T | Execution Architect</title>
+
+<title>Koteeswaran T | Execution Architect | Technical Project Manager</title>
+
+<meta name="description" content="Execution-driven Technical Project Manager specializing in Laravel, Flutter, AI-assisted delivery, and production-grade system execution.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -11,52 +15,83 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #070b12;
+  background: #06090f;
   color: #e6edf3;
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
+  width: 92%;
+  max-width: 1200px;
   margin: auto;
 }
 
 header {
   position: sticky;
   top: 0;
-  background: #070b12;
-  border-bottom: 1px solid #1f2937;
+  background: #06090f;
+  border-bottom: 1px solid #111827;
   z-index: 1000;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 16px 0;
 }
 
 .nav a {
   color: #9ca3af;
   margin-left: 20px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .nav a:hover {
   color: #22c55e;
 }
 
+/* HERO */
+.hero {
+  padding: 90px 0;
+}
+
+.hero h1 {
+  font-size: 46px;
+}
+
+.hero p {
+  max-width: 700px;
+  color: #cbd5f5;
+}
+
+.btn {
+  padding: 12px 22px;
+  background: #22c55e;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* SECTIONS */
 .section {
-  padding: 70px 0;
+  padding: 80px 0;
   border-top: 1px solid #111827;
 }
 
-/* 🔥 GLOW CARD */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 25px;
+}
+
+/* CARD */
 .card {
-  position: relative;
   background: #0f172a;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 14px;
+  position: relative;
   overflow: hidden;
   transition: 0.4s;
 }
@@ -72,31 +107,52 @@ header {
 
 .card:hover::before {
   opacity: 1;
-  filter: blur(8px);
+  filter: blur(10px);
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-6px);
 }
 
-.cards {
-  display: grid;
-  gap: 20px;
+/* IMAGE PLACEHOLDER */
+.placeholder {
+  height: 180px;
+  background: #020617;
+  border: 1px dashed #334155;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  margin-bottom: 15px;
 }
 
-h1 {font-size: 44px;}
-h2 {margin-bottom: 20px;}
-
-.highlight {
-  color: #22c55e;
+/* TAG */
+.tag {
+  display: inline-block;
+  background: #1f2937;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
-.btn {
-  padding: 12px 22px;
+/* CONTACT */
+.contact-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.contact-card a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 16px;
   background: #22c55e;
   color: #000;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
   font-weight: 600;
 }
 
@@ -106,6 +162,7 @@ footer {
   color: #6b7280;
 }
 </style>
+
 </head>
 
 <body>
@@ -114,10 +171,9 @@ footer {
 <div class="container nav">
 <div><b>Koteeswaran T</b></div>
 <nav>
-<a href="#case">Case Studies</a>
+<a href="#case">Projects</a>
 <a href="#execution">Execution</a>
-<a href="#ai">AI</a>
-<a href="#hire">Why Me</a>
+<a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </nav>
 </div>
@@ -125,15 +181,14 @@ footer {
 
 <!-- HERO -->
 
-<section class="section">
+<section class="hero">
 <div class="container">
 
 <h1>Execution Architect | Technical Project Manager</h1>
 
 <p>
-I don’t just manage projects — I <span class="highlight">drive execution, prevent failures,
-and deliver production-ready systems</span>.  
-From charter to release, I ensure clarity, coordination, and control.
+I build and deliver production-grade systems from <b>charter to release</b>.  
+Focused on execution clarity, real-time coordination, and failure prevention across Laravel, Flutter, and AI-assisted environments.
 </p>
 
 <a href="Koteeswaran PM Resume.pdf" class="btn">Download Resume</a>
@@ -141,65 +196,67 @@ From charter to release, I ensure clarity, coordination, and control.
 </div>
 </section>
 
-<!-- CASE STUDIES -->
+<!-- PROJECTS -->
 
 <section id="case" class="section">
 <div class="container">
 
 <h2>🚀 Case Studies</h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
+
+<div class="placeholder">EVKart Screenshot</div>
+
 <h3>EVKart Pro (Laravel Ecommerce)</h3>
-<p><b>Problem:</b> Full lifecycle ecommerce with admin + CX flows.</p>
-<p><b>Execution:</b> Built order → payment → fulfillment system.</p>
-<p><b>Failure Fix:</b> Prevented order/payment mismatch using validation layers.</p>
-<p><b>Outcome:</b> Stable production-ready platform.</p>
+
+<p>
+Full lifecycle ecommerce system with Admin + CX workflows and controlled order execution.
+</p>
+
+<p><b>Impact:</b> Reduced order inconsistencies and improved lifecycle control.</p>
+
+<a href="https://evkartvandalur.infinityfree.me/?i=1" target="_blank" class="btn">
+View Live Project
+</a>
+
+<div class="tag">Laravel</div>
+<div class="tag">Production</div>
+
 </div>
 
 <div class="card">
+
+<div class="placeholder">Sprintora UI</div>
+
 <h3>Sprintora (Execution OS)</h3>
-<p><b>Problem:</b> PM tools track but don’t execute.</p>
-<p><b>Execution:</b> Laravel-based execution OS with real-time signals.</p>
-<p><b>Innovation:</b> PM owns delivery, not status.</p>
-<p><b>Status:</b> Active build.</p>
+
+<p>
+Execution-first system where tasks drive delivery and real-time signals replace reports.
+</p>
+
+<p><b>Impact:</b> Improved delivery ownership and execution clarity.</p>
+
+<div class="tag">Laravel</div>
+<div class="tag">Realtime</div>
+
 </div>
 
 <div class="card">
+
+<div class="placeholder">Naama Drop UI</div>
+
 <h3>Naama Drop (Flutter)</h3>
-<p><b>Problem:</b> Mobile-first execution system.</p>
-<p><b>Execution:</b> Built scalable user workflows.</p>
-<p><b>Status:</b> Active development.</p>
-</div>
 
-</div>
+<p>
+Mobile-first execution platform focused on real-world workflows and scalable user interactions.
+</p>
 
-</div>
-</section>
+<p><b>Impact:</b> Designed scalable user journey for mobile-first execution.</p>
 
-<!-- REALTIME -->
+<div class="tag">Flutter</div>
 
-<section class="section">
-<div class="container">
-
-<h2>⚡ Real-Time Coordination</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Execution Bridge</h3>
-<p>Central link between Dev, QA, Product, Stakeholders.</p>
-</div>
-
-<div class="card">
-<h3>Live Production Handling</h3>
-<p>Resolve blockers instantly with engineering teams.</p>
-</div>
-
-<div class="card">
-<h3>Dependency Control</h3>
-<p>Continuous sync of APIs, teams, and workflows.</p>
 </div>
 
 </div>
@@ -207,83 +264,54 @@ From charter to release, I ensure clarity, coordination, and control.
 </div>
 </section>
 
-<!-- EXECUTION MODEL -->
+<!-- EXECUTION -->
 
 <section id="execution" class="section">
 <div class="container">
 
-<h2>⚙️ Execution System</h2>
+<h2>⚙️ Execution Model</h2>
 
-<div class="cards">
+<div class="grid">
 
-<div class="card"><h3>Charter</h3><p>Define problem & scope.</p></div>
-<div class="card"><h3>Flow Design</h3><p>Lifecycle mapping.</p></div>
-<div class="card"><h3>Planning</h3><p>Tasks + ownership.</p></div>
-<div class="card"><h3>Execution</h3><p>Build & integrate.</p></div>
+<div class="card"><h3>Charter → Scope</h3><p>Define objective and constraints.</p></div>
+<div class="card"><h3>Flow Design</h3><p>Order, payment, logistics mapping.</p></div>
+<div class="card"><h3>Failure Mapping</h3><p>Prevent production issues early.</p></div>
+<div class="card"><h3>Execution</h3><p>Build + integrate systems.</p></div>
 <div class="card"><h3>Validation</h3><p>Real-world testing.</p></div>
-<div class="card"><h3>Release</h3><p>Deploy & monitor.</p></div>
+<div class="card"><h3>Release</h3><p>Deploy and monitor.</p></div>
 
 </div>
 
 </div>
 </section>
 
-<!-- AI -->
+<!-- EXPERIENCE -->
 
-<section id="ai" class="section">
+<section id="experience" class="section">
 <div class="container">
 
-<h2>🤖 AI-Assisted Execution</h2>
+<h2>💼 Experience</h2>
 
-<div class="cards">
-
-<div class="card">
-<h3>Faster Development</h3>
-<p>AI-assisted backend, UI, and integrations.</p>
-</div>
+<div class="grid">
 
 <div class="card">
-<h3>Decision Support</h3>
-<p>Analyze flows, risks, and architecture.</p>
+<h3>B&G Technologies</h3>
+<p>Handled multi-API delivery and production governance. Improved release reliability.</p>
 </div>
 
 <div class="card">
-<h3>Documentation</h3>
-<p>Generate structured execution clarity.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- WHY HIRE -->
-
-<section id="hire" class="section">
-<div class="container">
-
-<h2>🎯 Why Hire Me</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Execution Ownership</h3>
-<p>I own delivery end-to-end, not just tracking.</p>
+<h3>FABC</h3>
+<p>Aligned Web3 workflows and reduced execution gaps across teams.</p>
 </div>
 
 <div class="card">
-<h3>Failure Prevention</h3>
-<p>I focus on preventing production issues before they happen.</p>
+<h3>GameNation</h3>
+<p>Delivered full ecommerce system with logistics automation.</p>
 </div>
 
 <div class="card">
-<h3>System Thinking</h3>
-<p>I design systems, not just features.</p>
-</div>
-
-<div class="card">
-<h3>Real-World Execution</h3>
-<p>Experience in high-pressure environments (airline ops → tech delivery).</p>
+<h3>IndiGo Airlines</h3>
+<p>Managed real-time operations under high-pressure environments.</p>
 </div>
 
 </div>
@@ -296,13 +324,17 @@ From charter to release, I ensure clarity, coordination, and control.
 <section id="contact" class="section">
 <div class="container">
 
-<h2>📬 Contact</h2>
+<div class="contact-card">
 
-<p>Email: koteeswaran.t@hotmail.com</p>
-<p>Phone: +91 9445712235</p>
-<p><a href="https://linkedin.com/in/koteeswaran-t-b0371a398">LinkedIn</a></p>
+<h2>📬 Let’s Connect</h2>
 
-<p><b>Open to immediate opportunities</b></p>
+<p>Open to immediate opportunities and execution-driven roles.</p>
+
+<a href="mailto:koteeswaran.t@hotmail.com">Email</a>
+<a href="https://wa.me/919445712235">WhatsApp</a>
+<a href="https://linkedin.com/in/koteeswaran-t-b0371a398">LinkedIn</a>
+
+</div>
 
 </div>
 </section>
