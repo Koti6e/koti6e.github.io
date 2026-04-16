@@ -13,6 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: #0b0f17;
   color: #e6edf3;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -22,52 +23,56 @@ body {
 }
 
 header {
-  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  background: #0b0f17;
   border-bottom: 1px solid #1f2937;
+  z-index: 1000;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 15px 0;
 }
 
 .nav a {
   color: #9ca3af;
   margin-left: 20px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #fff;
+  color: #22c55e;
 }
 
 .hero {
-  padding: 80px 0;
+  padding: 90px 0;
+  animation: fadeUp 1s ease;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: 44px;
 }
 
 .hero h2 {
-  font-size: 20px;
   color: #9ca3af;
+  margin-top: 10px;
 }
 
 .hero p {
+  max-width: 700px;
   margin: 20px 0;
   color: #cbd5f5;
-  max-width: 700px;
 }
 
 .btn {
-  padding: 12px 20px;
+  padding: 12px 22px;
   background: #22c55e;
   color: #000;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
   font-weight: 600;
 }
 
@@ -86,10 +91,11 @@ header {
   background: #111827;
   padding: 22px;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
-.card h3 {
-  margin-top: 0;
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .tag {
@@ -97,22 +103,25 @@ header {
   background: #1f2937;
   padding: 5px 10px;
   border-radius: 6px;
-  margin: 5px 5px 0 0;
+  margin-top: 8px;
   font-size: 12px;
 }
 
 .highlight {
   color: #22c55e;
-  font-weight: 600;
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
 }
 
 footer {
   text-align: center;
-  padding: 30px 0;
+  padding: 30px;
   color: #6b7280;
 }
 </style>
-
 </head>
 
 <body>
@@ -122,7 +131,7 @@ footer {
 <div><b>Koteeswaran T</b></div>
 <nav>
 <a href="#projects">Projects</a>
-<a href="#execution">Execution Model</a>
+<a href="#execution">Execution</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -132,62 +141,59 @@ footer {
 <section class="hero">
 <div class="container">
 
-<h1>Technical Project Manager</h1>
-<h2>Execution-First • AI-Assisted • Product Builder</h2>
+<h1>Execution-First Technical Project Manager</h1>
+
+<h2>AI-Assisted • Laravel • Flutter • Production Delivery</h2>
 
 <p>
-Technical Project Manager with 10+ years of experience delivering production-grade systems across ecommerce,
-logistics, gaming, and real-time platforms.  
-I specialize in <span class="highlight">end-to-end execution</span> — converting ideas into working systems,
-driving delivery under ambiguity, and ensuring production stability.
+I specialize in converting ideas into working systems.  
+From <span class="highlight">charter → architecture → execution → production</span>,  
+I ensure delivery clarity, prevent failures, and drive systems to stability.
 </p>
 
-<a href="Koteeswaran PM Resume.pdf" download class="btn">
-Download Resume
-</a>
+<a href="Koteeswaran PM Resume.pdf" class="btn">Download Resume</a>
 
 </div>
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects" class="section">
 <div class="container">
 
-<h2>🚀 Product & Platform Builds</h2>
+<h2>🚀 Product Builds</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Sprintora (Execution OS)</h3>
 <p>
-Own product concept designed as an execution-first project operating system where
-tasks drive reality, PM owns delivery, and real-time signals replace reporting.
+Own product built on Laravel — execution-first OS where tasks drive reality,
+PM owns delivery, and real-time signals replace reporting.
 </p>
-<p><b>Status:</b> In Development (Production-Oriented)</p>
 <span class="tag">Laravel</span>
-<span class="tag">Execution System</span>
+<span class="tag">Own Product</span>
 <span class="tag">Realtime</span>
 </div>
 
 <div class="card">
 <h3>EVKart Pro</h3>
 <p>
-EV spare parts ecommerce platform built with complete lifecycle:
-Product → Cart → Order → Payment → Fulfillment.
-Includes <b>Admin workflows</b>, <b>Customer (CX) flows</b>, and order control systems.
+Laravel-based ecommerce system with full lifecycle:
+Product → Order → Payment → Fulfillment.  
+Includes Admin workflows, CX flows, and order control systems.
 </p>
-<p><b>Status:</b> Production Build</p>
 <span class="tag">Laravel</span>
 <span class="tag">Ecommerce</span>
-<span class="tag">Admin Panel</span>
+<span class="tag">Production</span>
 </div>
 
 <div class="card">
 <h3>Naama Drop</h3>
 <p>
-Mobile-first application focused on real-world delivery execution and scalable workflows,
-designed with practical user interaction and operational thinking.
+Flutter mobile application focused on execution-driven delivery
+and real-world operational workflows.
 </p>
-<p><b>Status:</b> Active Development</p>
 <span class="tag">Flutter</span>
 <span class="tag">Mobile Product</span>
 </div>
@@ -197,52 +203,125 @@ designed with practical user interaction and operational thinking.
 </div>
 </section>
 
-<section id="execution" class="section">
+<!-- PRE EXECUTION -->
+
+<section class="section">
 <div class="container">
 
-<h2>⚙️ How I Run Projects (TPM Execution Model)</h2>
+<h2>🧠 Before Code (Execution Clarity)</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>1. Charter & Problem Framing</h3>
-<p>Define scope, business objective, system boundaries, and risks.</p>
+<h3>Charter Definition</h3>
+<p>Scope, objective, constraints, and success metrics.</p>
 </div>
 
 <div class="card">
-<h3>2. System Flow Design</h3>
-<p>Convert requirements into lifecycle flows (Order, Payment, Logistics, etc).</p>
+<h3>System Flow Design</h3>
+<p>Order, payment, logistics, and user journeys.</p>
 </div>
 
 <div class="card">
-<h3>3. Execution Planning</h3>
-<p>Break into actionable tasks, sprint structure, ownership mapping.</p>
+<h3>Failure Mapping</h3>
+<p>Edge cases identified before development begins.</p>
 </div>
 
 <div class="card">
-<h3>4. Build & Integration</h3>
-<p>Drive dev + API integrations + validation cycles.</p>
-</div>
-
-<div class="card">
-<h3>5. Validation & UAT</h3>
-<p>Ensure real-world flow correctness before release.</p>
-</div>
-
-<div class="card">
-<h3>6. Release & Production Control</h3>
-<p>Deployment, monitoring, rollback readiness, issue handling.</p>
-</div>
-
-<div class="card">
-<h3>7. Post-Production Stability</h3>
-<p>Resolve failures, optimize flows, ensure system reliability.</p>
+<h3>Execution Readiness</h3>
+<p>Dependencies, APIs, and team alignment validated.</p>
 </div>
 
 </div>
 
 </div>
 </section>
+
+<!-- EXECUTION MODEL -->
+
+<section id="execution" class="section">
+<div class="container">
+
+<h2>⚙️ Execution Model</h2>
+
+<div class="cards">
+
+<div class="card"><h3>Plan → Breakdown</h3><p>Convert flows into tasks.</p></div>
+<div class="card"><h3>Build → Integrate</h3><p>Drive dev + API integrations.</p></div>
+<div class="card"><h3>Validate → Release</h3><p>Ensure real-world readiness.</p></div>
+<div class="card"><h3>Monitor → Stabilize</h3><p>Fix production issues fast.</p></div>
+
+</div>
+
+</div>
+</section>
+
+<!-- FAILURE -->
+
+<section class="section">
+<div class="container">
+
+<h2>⚠️ Failure & Coordination</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Failure Handling</h3>
+<p>Resolved order-processing gaps, API mismatches, and production issues.</p>
+</div>
+
+<div class="card">
+<h3>Cross-Team Execution</h3>
+<p>Aligned Dev, QA, Product, and Stakeholders for delivery continuity.</p>
+</div>
+
+<div class="card">
+<h3>Escalation Control</h3>
+<p>Handled critical production blockers and ensured resolution.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- DOCUMENTATION -->
+
+<section class="section">
+<div class="container">
+
+<h2>📄 Documentation</h2>
+
+<div class="cards">
+
+<div class="card"><h3>System Flows</h3><p>Lifecycle-based documentation.</p></div>
+<div class="card"><h3>API Contracts</h3><p>Clear request/response structures.</p></div>
+<div class="card"><h3>Validation Rules</h3><p>Prevent failures before release.</p></div>
+
+</div>
+
+</div>
+</section>
+
+<!-- HANDSHAKE -->
+
+<section class="section">
+<div class="container">
+
+<h2>🤝 Handover Model</h2>
+
+<div class="cards">
+
+<div class="card"><h3>Dev → QA</h3><p>Feature + edge validation.</p></div>
+<div class="card"><h3>QA → Release</h3><p>Full flow approval.</p></div>
+<div class="card"><h3>Release → Production</h3><p>Monitoring + rollback readiness.</p></div>
+
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience" class="section">
 <div class="container">
@@ -253,32 +332,35 @@ designed with practical user interaction and operational thinking.
 
 <div class="card">
 <h3>B&G Technologies</h3>
-<p>Senior Technical Project Manager – 2025</p>
-<p>Multi-API platform delivery, production governance, escalation handling.</p>
+<p>Senior TPM – Multi-API delivery, governance, escalation handling.</p>
 </div>
 
 <div class="card">
 <h3>FABC</h3>
-<p>Technical PM – 2023–2025</p>
-<p>Web3 ecosystem, wallet integrations, execution alignment.</p>
+<p>Technical PM – Web3 systems, wallet integration.</p>
 </div>
 
 <div class="card">
 <h3>GameNation</h3>
-<p>Project Manager / Delivery Lead – 2021–2023</p>
-<p>Full ecommerce lifecycle delivery with logistics integrations.</p>
+<p>Ecommerce platform delivery with logistics integration.</p>
+</div>
+
+<div class="card">
+<h3>Fusion Innovation</h3>
+<p>Food delivery systems & lifecycle execution.</p>
 </div>
 
 <div class="card">
 <h3>IndiGo Airlines</h3>
-<p>Operations Executive – 2014–2020</p>
-<p>Real-time execution control, high-pressure coordination, OTP delivery.</p>
+<p>Real-time operations & execution under pressure.</p>
 </div>
 
 </div>
 
 </div>
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact" class="section">
 <div class="container">
@@ -287,12 +369,7 @@ designed with practical user interaction and operational thinking.
 
 <p>Email: koteeswaran.t@hotmail.com</p>
 <p>Phone: +91 9445712235</p>
-
-<p>
-<a href="https://linkedin.com/in/koteeswaran-t-b0371a398" target="_blank">
-LinkedIn Profile
-</a>
-</p>
+<p><a href="https://linkedin.com/in/koteeswaran-t-b0371a398">LinkedIn</a></p>
 
 <p><b>Open to immediate opportunities</b></p>
 
