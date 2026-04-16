@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Koteeswaran T | Execution-First Technical PM</title>
+<title>Koteeswaran T | Execution Architect</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -11,9 +11,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0b0f17;
+  background: #070b12;
   color: #e6edf3;
-  scroll-behavior: smooth;
 }
 
 .container {
@@ -25,7 +24,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: #0b0f17;
+  background: #070b12;
   border-bottom: 1px solid #1f2937;
   z-index: 1000;
 }
@@ -47,73 +46,58 @@ header {
   color: #22c55e;
 }
 
-.hero {
-  padding: 90px 0;
-  animation: fadeUp 1s ease;
+.section {
+  padding: 70px 0;
+  border-top: 1px solid #111827;
 }
 
-.hero h1 {
-  font-size: 44px;
+/* 🔥 GLOW CARD */
+.card {
+  position: relative;
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
-.hero h2 {
-  color: #9ca3af;
-  margin-top: 10px;
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, transparent, #22c55e, transparent);
+  opacity: 0;
+  transition: 0.5s;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: 20px 0;
-  color: #cbd5f5;
+.card:hover::before {
+  opacity: 1;
+  filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
+h1 {font-size: 44px;}
+h2 {margin-bottom: 20px;}
+
+.highlight {
+  color: #22c55e;
 }
 
 .btn {
   padding: 12px 22px;
   background: #22c55e;
   color: #000;
-  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-}
-
-.section {
-  padding: 70px 0;
-  border-top: 1px solid #1f2937;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #111827;
-  padding: 22px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.tag {
-  display: inline-block;
-  background: #1f2937;
-  padding: 5px 10px;
   border-radius: 6px;
-  margin-top: 8px;
-  font-size: 12px;
-}
-
-.highlight {
-  color: #22c55e;
-}
-
-@keyframes fadeUp {
-  from {opacity:0; transform: translateY(20px);}
-  to {opacity:1; transform: translateY(0);}
+  font-weight: 600;
 }
 
 footer {
@@ -130,25 +114,26 @@ footer {
 <div class="container nav">
 <div><b>Koteeswaran T</b></div>
 <nav>
-<a href="#projects">Projects</a>
+<a href="#case">Case Studies</a>
 <a href="#execution">Execution</a>
-<a href="#experience">Experience</a>
+<a href="#ai">AI</a>
+<a href="#hire">Why Me</a>
 <a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+
+<section class="section">
 <div class="container">
 
-<h1>Execution-First Technical Project Manager</h1>
-
-<h2>AI-Assisted • Laravel • Flutter • Production Delivery</h2>
+<h1>Execution Architect | Technical Project Manager</h1>
 
 <p>
-I specialize in converting ideas into working systems.  
-From <span class="highlight">charter → architecture → execution → production</span>,  
-I ensure delivery clarity, prevent failures, and drive systems to stability.
+I don’t just manage projects — I <span class="highlight">drive execution, prevent failures,
+and deliver production-ready systems</span>.  
+From charter to release, I ensure clarity, coordination, and control.
 </p>
 
 <a href="Koteeswaran PM Resume.pdf" class="btn">Download Resume</a>
@@ -156,46 +141,36 @@ I ensure delivery clarity, prevent failures, and drive systems to stability.
 </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- CASE STUDIES -->
 
-<section id="projects" class="section">
+<section id="case" class="section">
 <div class="container">
 
-<h2>🚀 Product Builds</h2>
+<h2>🚀 Case Studies</h2>
 
 <div class="cards">
 
 <div class="card">
+<h3>EVKart Pro (Laravel Ecommerce)</h3>
+<p><b>Problem:</b> Full lifecycle ecommerce with admin + CX flows.</p>
+<p><b>Execution:</b> Built order → payment → fulfillment system.</p>
+<p><b>Failure Fix:</b> Prevented order/payment mismatch using validation layers.</p>
+<p><b>Outcome:</b> Stable production-ready platform.</p>
+</div>
+
+<div class="card">
 <h3>Sprintora (Execution OS)</h3>
-<p>
-Own product built on Laravel — execution-first OS where tasks drive reality,
-PM owns delivery, and real-time signals replace reporting.
-</p>
-<span class="tag">Laravel</span>
-<span class="tag">Own Product</span>
-<span class="tag">Realtime</span>
+<p><b>Problem:</b> PM tools track but don’t execute.</p>
+<p><b>Execution:</b> Laravel-based execution OS with real-time signals.</p>
+<p><b>Innovation:</b> PM owns delivery, not status.</p>
+<p><b>Status:</b> Active build.</p>
 </div>
 
 <div class="card">
-<h3>EVKart Pro</h3>
-<p>
-Laravel-based ecommerce system with full lifecycle:
-Product → Order → Payment → Fulfillment.  
-Includes Admin workflows, CX flows, and order control systems.
-</p>
-<span class="tag">Laravel</span>
-<span class="tag">Ecommerce</span>
-<span class="tag">Production</span>
-</div>
-
-<div class="card">
-<h3>Naama Drop</h3>
-<p>
-Flutter mobile application focused on execution-driven delivery
-and real-world operational workflows.
-</p>
-<span class="tag">Flutter</span>
-<span class="tag">Mobile Product</span>
+<h3>Naama Drop (Flutter)</h3>
+<p><b>Problem:</b> Mobile-first execution system.</p>
+<p><b>Execution:</b> Built scalable user workflows.</p>
+<p><b>Status:</b> Active development.</p>
 </div>
 
 </div>
@@ -203,33 +178,28 @@ and real-world operational workflows.
 </div>
 </section>
 
-<!-- PRE EXECUTION -->
+<!-- REALTIME -->
 
 <section class="section">
 <div class="container">
 
-<h2>🧠 Before Code (Execution Clarity)</h2>
+<h2>⚡ Real-Time Coordination</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Charter Definition</h3>
-<p>Scope, objective, constraints, and success metrics.</p>
+<h3>Execution Bridge</h3>
+<p>Central link between Dev, QA, Product, Stakeholders.</p>
 </div>
 
 <div class="card">
-<h3>System Flow Design</h3>
-<p>Order, payment, logistics, and user journeys.</p>
+<h3>Live Production Handling</h3>
+<p>Resolve blockers instantly with engineering teams.</p>
 </div>
 
 <div class="card">
-<h3>Failure Mapping</h3>
-<p>Edge cases identified before development begins.</p>
-</div>
-
-<div class="card">
-<h3>Execution Readiness</h3>
-<p>Dependencies, APIs, and team alignment validated.</p>
+<h3>Dependency Control</h3>
+<p>Continuous sync of APIs, teams, and workflows.</p>
 </div>
 
 </div>
@@ -242,42 +212,44 @@ and real-world operational workflows.
 <section id="execution" class="section">
 <div class="container">
 
-<h2>⚙️ Execution Model</h2>
+<h2>⚙️ Execution System</h2>
 
 <div class="cards">
 
-<div class="card"><h3>Plan → Breakdown</h3><p>Convert flows into tasks.</p></div>
-<div class="card"><h3>Build → Integrate</h3><p>Drive dev + API integrations.</p></div>
-<div class="card"><h3>Validate → Release</h3><p>Ensure real-world readiness.</p></div>
-<div class="card"><h3>Monitor → Stabilize</h3><p>Fix production issues fast.</p></div>
+<div class="card"><h3>Charter</h3><p>Define problem & scope.</p></div>
+<div class="card"><h3>Flow Design</h3><p>Lifecycle mapping.</p></div>
+<div class="card"><h3>Planning</h3><p>Tasks + ownership.</p></div>
+<div class="card"><h3>Execution</h3><p>Build & integrate.</p></div>
+<div class="card"><h3>Validation</h3><p>Real-world testing.</p></div>
+<div class="card"><h3>Release</h3><p>Deploy & monitor.</p></div>
 
 </div>
 
 </div>
 </section>
 
-<!-- FAILURE -->
+<!-- AI -->
 
-<section class="section">
+<section id="ai" class="section">
 <div class="container">
 
-<h2>⚠️ Failure & Coordination</h2>
+<h2>🤖 AI-Assisted Execution</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Failure Handling</h3>
-<p>Resolved order-processing gaps, API mismatches, and production issues.</p>
+<h3>Faster Development</h3>
+<p>AI-assisted backend, UI, and integrations.</p>
 </div>
 
 <div class="card">
-<h3>Cross-Team Execution</h3>
-<p>Aligned Dev, QA, Product, and Stakeholders for delivery continuity.</p>
+<h3>Decision Support</h3>
+<p>Analyze flows, risks, and architecture.</p>
 </div>
 
 <div class="card">
-<h3>Escalation Control</h3>
-<p>Handled critical production blockers and ensured resolution.</p>
+<h3>Documentation</h3>
+<p>Generate structured execution clarity.</p>
 </div>
 
 </div>
@@ -285,74 +257,33 @@ and real-world operational workflows.
 </div>
 </section>
 
-<!-- DOCUMENTATION -->
+<!-- WHY HIRE -->
 
-<section class="section">
+<section id="hire" class="section">
 <div class="container">
 
-<h2>📄 Documentation</h2>
-
-<div class="cards">
-
-<div class="card"><h3>System Flows</h3><p>Lifecycle-based documentation.</p></div>
-<div class="card"><h3>API Contracts</h3><p>Clear request/response structures.</p></div>
-<div class="card"><h3>Validation Rules</h3><p>Prevent failures before release.</p></div>
-
-</div>
-
-</div>
-</section>
-
-<!-- HANDSHAKE -->
-
-<section class="section">
-<div class="container">
-
-<h2>🤝 Handover Model</h2>
-
-<div class="cards">
-
-<div class="card"><h3>Dev → QA</h3><p>Feature + edge validation.</p></div>
-<div class="card"><h3>QA → Release</h3><p>Full flow approval.</p></div>
-<div class="card"><h3>Release → Production</h3><p>Monitoring + rollback readiness.</p></div>
-
-</div>
-
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience" class="section">
-<div class="container">
-
-<h2>💼 Experience</h2>
+<h2>🎯 Why Hire Me</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>B&G Technologies</h3>
-<p>Senior TPM – Multi-API delivery, governance, escalation handling.</p>
+<h3>Execution Ownership</h3>
+<p>I own delivery end-to-end, not just tracking.</p>
 </div>
 
 <div class="card">
-<h3>FABC</h3>
-<p>Technical PM – Web3 systems, wallet integration.</p>
+<h3>Failure Prevention</h3>
+<p>I focus on preventing production issues before they happen.</p>
 </div>
 
 <div class="card">
-<h3>GameNation</h3>
-<p>Ecommerce platform delivery with logistics integration.</p>
+<h3>System Thinking</h3>
+<p>I design systems, not just features.</p>
 </div>
 
 <div class="card">
-<h3>Fusion Innovation</h3>
-<p>Food delivery systems & lifecycle execution.</p>
-</div>
-
-<div class="card">
-<h3>IndiGo Airlines</h3>
-<p>Real-time operations & execution under pressure.</p>
+<h3>Real-World Execution</h3>
+<p>Experience in high-pressure environments (airline ops → tech delivery).</p>
 </div>
 
 </div>
